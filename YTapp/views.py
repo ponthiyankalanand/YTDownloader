@@ -23,12 +23,16 @@ def download(request):
 			print('inside video block')
 			
 			yt.streams.filter(type = 'video').first().download(output_path = save_path, filename = save_name)
+			print('download completed')
 			save_name=save_name+'.mp4'
 			return render(request, "index.html",{'yt' : yt,'save_name' : save_name,'save_path' : save_path})
+
 		elif radio == 'audio':
 			print('inside audio block')
-			save_name=save_name+'.webm'
+			#save_name=save_name
 			yt.streams.filter(mime_type= 'audio/webm').first().download(output_path = save_path, filename = save_name)
+			print('download completed')
+			save_name=save_name+'.webm'
 			return render(request, "index.html",{'yt' : yt,'save_name' : save_name,'save_path' : save_path})
 			print('done')
 		else:

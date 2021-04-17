@@ -25,12 +25,12 @@
 					<p id="font_style1">( Copy, Paste, Download ! )</p>
 				</div></center>
 			    <div class="col">
-			      <center><input type="text" class="col-md-6" name="url" placeholder="Enter the URL">
+			      <center><input type="text" class="col-md-6" name="url" placeholder="Enter the URL" required>
 			      <input type="submit" class="btn btn-primary mb-2" value="Download" >
 			      <p id="font_style1">Please select your Format:</p>
-				  <input type="radio" id="video" name="format" value="video">
+				  <input type="radio" id="video" name="format" value="video" required>
 				  <label for="Video"><p id="font_style1">Video</p></label>
-				  <input type="radio" id="audio" name="format" value="audio">
+				  <input type="radio" id="audio" name="format" value="audio" required> 
 				  <label for="Audio"><p id="font_style1">Audio</p></label> 
 				  </center>
 				  <br>
@@ -46,7 +46,7 @@
         	<p><font color=red>{{yt.title}}</font></p>
         	<img src= "{{yt.thumbnail_url}}" alt="" width="200" height="180%">
  
-        	<p><font color=red><a href="media/{{save_name}}/" >Download</a></font></p>
+        	<p><font color=red><a href="media/{{save_name}}/" download >Download File</a></font></p>
 
  
         </center>
