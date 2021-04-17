@@ -1,0 +1,14 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: #192c8c
+}
+.header_div{
+    width: 80%;
+    height: 30vh;
+    
+}
+#font_style1{
+    font-family: "Times New Roman", Times, serif;
+    color: White;
+}
