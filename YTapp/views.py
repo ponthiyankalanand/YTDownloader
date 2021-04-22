@@ -11,14 +11,17 @@ def home(request):
 
 def download(request):
 	#return render(request, 'index.html')
-	save_path="media/"
+	save_path="/media/"
 
 	try:
-		url= request.POST['url']
+		url= request.POST['urlval']
 		radio=request.POST['format']
 		yt = YouTube(url)
 		print(radio)
-		save_name=yt.title
+		strObj = yt.title
+		print(strObj)
+		save_name = ''.join((filter(lambda x: x in ['q','e','r','t','y','u','i','','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M','ആ','എ','ഈ','ഇ','ഉ','ന','മ','സ','അ','യ','ക്ക','ക','ത','ഥ','ര','ജ','ച','ച്ച','ല','ണ്','','ന്ന','പ','','പ്പ','ഷ','ശ','വ'], strObj)))
+		save_name=save_name+'CPDownload'
 		if radio == 'video':
 			print('inside video block')
 			
