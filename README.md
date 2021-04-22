@@ -1,3 +1,3 @@
 # YTDownloader
 Django web project for youtube video convert and download
-depandancy lib: jasons, Requests, pytube
+depandency lib: jasons, Requests, pytube
